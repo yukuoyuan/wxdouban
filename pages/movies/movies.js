@@ -116,5 +116,14 @@ Page({
       }
     }
     return array;
+  },
+  /**
+   * 更多的电影
+   */
+  moreMovies: function (event) {
+    var category=event.currentTarget.dataset.category;
+    wx.navigateTo({
+      url: 'more_movies/more_movies?category=' + category,
+    })
   }
 })

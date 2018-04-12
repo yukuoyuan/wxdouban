@@ -3,7 +3,8 @@
     "pages/splash/splash",
     "pages/article/article",
     "pages/article/article_details/article_details",
-    "pages/movies/movies"
+    "pages/movies/movies",
+    "pages/movies/more_movies/more_movies"
   ],
   "window": {
     "backgroundTextStyle": "light",
