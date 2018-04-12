@@ -1,0 +1,10 @@
+/**index.wxss**/
+@import "movie_list_template/movie_list_template.wxss";
+
+.container {
+  background-color: #f2f2f2;
+}
+
+.movice_template {
+  margin-bottom: 30rpx;
+}

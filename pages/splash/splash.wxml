@@ -1,0 +1,8 @@
+<view class='container'>
+  <image class='user-avatar' src='/image/avatar.png'>
+  </image>
+  <text class='user-name'>Hello, Martian</text>
+  <view class='jump-container' bindtap='jumpIndex'>
+    <text class='jump'>开启小程序之旅</text>
+  </view>
+</view>

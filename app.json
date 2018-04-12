@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/splash/splash",
+    "pages/article/article",
+    "pages/article/article_details/article_details",
+    "pages/movies/movies"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "selectedColor":"#405f80",
+    "list": [
+      {
+        "pagePath": "pages/article/article",
+        "iconPath": "image/home_main_unchecked.png",
+        "selectedIconPath": "image/home_main_checked.png",
+        "text": "阅读"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "iconPath": "image/home_shop_car_unchecked.png",
+        "selectedIconPath": "image/home_shop_car_checked.png",
+        "text": "电影"
+      }
+    ]
+  }
+}

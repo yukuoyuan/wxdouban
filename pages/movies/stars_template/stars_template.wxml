@@ -1,0 +1,12 @@
+<!--这是一个抽取的star的星星组件  -->
+<template name="stars_template">
+  <view class='starts_container'>
+    <view class='starts'>
+      <block wx:for="{{stars}}" wx:for-item="star">
+        <image wx:if="{{star==1}}" src='/image/icon/icon_star_unchecked.png'></image>
+        <image wx:else src='/image/icon/icon_star_checked.png'></image>
+      </block>
+    </view>
+    <text class='starts_score'>{{score}}</text>
+  </view>
+</template>

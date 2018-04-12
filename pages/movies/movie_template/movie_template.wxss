@@ -1,0 +1,15 @@
+@import "../stars_template/stars_template.wxss";
+
+.movie_container{
+  display:  flex;
+  flex-direction: column;
+  padding: 0 22rpx;
+}
+.movie_img{
+width: 200rpx;
+height: 270rpx;
+padding-bottom: 20rpx;
+}
+.movie_text{
+margin-bottom: 16rpx;
+}

@@ -1,0 +1,26 @@
+.starts_container {
+  display: flex;
+  flex-direction: row;
+}
+
+/*星星容器的样式  */
+
+.starts {
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin-right: 24rpx;
+  margin-top: 6rpx;
+}
+
+/*星星的样式  */
+
+.starts image {
+  height: 17rpx;
+  width: 17rpx;
+  padding-left: 3rpx;
+}
+
+.starts_score {
+  color: #1f3463;
+}

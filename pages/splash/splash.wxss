@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*头像样式  */
+
+.user-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 180rpx;
+}
+
+/*名字样式  */
+
+.user-name {
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.jump-container {
+  margin-top: 200rpx;
+  border: 2rpx solid #405f80;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 5rpx;
+  text-align: center;
+}
+
+/*名字样式  */
+
+.jump {
+  font-size: 22rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+
+page {
+  background-color: #b3d4db;
+  height: 100%;
+}

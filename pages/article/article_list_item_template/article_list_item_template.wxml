@@ -1,0 +1,16 @@
+<template name="article_list">
+<!--文章列表标题  -->
+      <view class='article_list_author'>
+        <image class='article_list_author_avatar' src='/image/avatar.png'></image>
+        <text class='article_list_author_date'>{{date}}</text>
+      </view>
+      <text class='title'>{{title}}</text>
+      <image class='article_list_details_img' src='/image/article_list_1.png'></image>
+      <text class='article_list_details_text'>{{content}}</text>
+      <view class='article_list_like'>
+        <image class='article_list_like_star_chat_icon' src='/image/icon_star_gray.png'></image>
+        <text class='article_list_like_star_chat_text'>{{reading}}</text>
+        <image class='article_list_like_star_chat_icon' src='/image/icon_chat.png'></image>
+        <text class='article_list_like_star_chat_text'>{{collection}}</text>
+      </view>
+</template>

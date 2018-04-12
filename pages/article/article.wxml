@@ -1,0 +1,20 @@
+<!--引入列表条目模版  -->
+<import src='article_list_item_template/article_list_item_template.wxml' />
+<view>
+  <swiper catchtap='swiperjumpDetails' indicator-dots="true" autoplay="true" interval="3000" class='swipe-container'>
+    <block wx:for="{{swipeUrls}}">
+      <swiper-item>
+        <image class='swipe-item' src="{{item}}" data-bind='{{0}}' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--文章列表  -->
+  <block wx:for="{{articleList}}" wx:for-item="item">
+    <view class='article_list_container'>
+      <view catchtap="jumpDetails" data-bind='{{item.postId}}'>
+        <template is="article_list" data="{{...item}}" />
+      </view>
+    </view>
+  </block>
+
+</view>

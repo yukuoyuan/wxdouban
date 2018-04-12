@@ -1,0 +1,112 @@
+/*跟布局样式  */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*头布局图片样式  */
+
+.head-image {
+  width: 100%;
+  height: 460rpx;
+}
+
+/*头像日期样式  */
+
+.author-date {
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+/*头像样式  */
+
+.avatar {
+  height: 64rpx;
+  width: 64rpx;
+  vertical-align: middle;
+}
+
+/*作者样式  */
+
+.author {
+  font-size: 30rpx;
+  font-weight: 300;
+  margin-left: 20rpx;
+  vertical-align: middle;
+  color: #666;
+}
+
+.const_text {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+/*日期  */
+
+.const_date {
+  margin-left: 30rpx;
+  vertical-align: middle;
+  color: #999;
+}
+
+/*标题  */
+
+.title {
+  margin-left: 40rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-top: 30rpx;
+  letter-spacing: 2px;
+  color: #4b556c;
+}
+
+.tool {
+  margin-top: 20rpx;
+}
+
+.circle_img {
+  float: right;
+  margin-right: 40rpx;
+  vertical-align: middle;
+}
+
+.circle_img Image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.share_icon {
+  margin-left: 30rpx;
+}
+
+.horizon_line {
+  width: 660rpx;
+  height: 1px;
+  background-color: #e5e5e5;
+  vertical-align: middle;
+  position: relative;
+  top: 46rpx;
+  margin: 0 auto;
+  z-index: -99;
+}
+
+.details {
+  color: #666;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+  line-height: 44rpx;
+  letter-spacing: 2rpx;
+}
+.audio{
+  width: 102rpx;
+  height: 110rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -51rpx;
+  top: 180rpx;
+  opacity: 0.6;
+}

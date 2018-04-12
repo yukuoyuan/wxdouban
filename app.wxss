@@ -1,0 +1,6 @@
+/**app.wxss**/
+
+/*全局字体默认大小  */
+text{
+  font-size: 24rpx;
+}
