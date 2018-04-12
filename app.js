@@ -3,7 +3,7 @@ App({
   /**
    * 全局变量
    */
-  LocalDat: {
+  LocalData: {
     isPlayingMusic: false,
     playingMusicId: ''
   },

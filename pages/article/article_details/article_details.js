@@ -40,7 +40,7 @@ Page({
       articleCollectionList[id] = false;
       wx.setStorageSync('articleCollectionList', articleCollectionList);
     }
-    if (app.LocalDat.isPlayingMusic && id == app.LocalDat.playingMusicId) {
+    if (app.LocalData.isPlayingMusic && id == app.LocalData.playingMusicId) {
       this.setData({
         isPlayAudio: true
       })
@@ -119,6 +119,8 @@ Page({
     this.setData({
       isPlayAudio: true
     })
+    app.LocalData.isPlayingMusic=true;
+    app.LocalData.playingMusicId = this.data.id;
     var articledetails = articleListData.postList[this.data.id];
     /**
      * 后台播放音乐
