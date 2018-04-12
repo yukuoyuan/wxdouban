@@ -1,4 +1,8 @@
 // pages/movies/more_movies/more_movies.js
+const inTheatersUrls = require('../../../urlconfig').inTheatersUrl;
+const comingSoonUrls = require('../../../urlconfig').comingSoonUrl;
+const top250Urls = require('../../../urlconfig').top250Url;
+const httpUtils = require('../../../utils/netutils.js');
 Page({
 
   /**
@@ -16,7 +20,17 @@ Page({
     this.setData({
       navigationBarTitleText: category
     })
-   
+    switch (category) {
+      case "正在热映":
+        this.getMovieListData(inTheatersUrls, "正在热映", "inTheatersMovies");
+        break;
+      case "即将热映":
+        this.getMovieListData(comingSoonUrls, "即将热映", "comingSoonMovies");
+        break;
+      case "Top250":
+        this.getMovieListData(top250Urls, "Top250", "top250Movies");
+        break;
+    }
     console.log(options.category)
   },
 
@@ -28,28 +42,21 @@ Page({
       title: this.data.navigationBarTitleText
     })
   },
-
   /**
-   * 生命周期函数--监听页面显示
+   * 获取电影列表
    */
-  onShow: function () {
-
+  getMovieListData: function (apiUrl, settingName, settingKey) {
+    var data = {};
+    data.start = 0;
+    data.count = 20;
+    httpUtils.http(apiUrl, data, this.callBack)
   },
-
   /**
-   * 生命周期函数--监听页面隐藏
+   * 回调
    */
-  onHide: function () {
-
+  callBack: function (res) {
+    console.log(res);
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

@@ -123,7 +123,7 @@ Page({
   moreMovies: function (event) {
     var category=event.currentTarget.dataset.category;
     wx.navigateTo({
-      url: 'more_movies/more_movies?category=' + category,
+      url: 'more_movies/more_movies?category='+category,
     })
   }
 })
