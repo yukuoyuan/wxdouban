@@ -23,6 +23,9 @@ Page({
    */
   getMovieDetails: function (id) {
     var data = {};
+    wx.showLoading({
+      title: '加载中',
+    })
     httpUtils.http(movieDetailsUrls + "/" + id, data, this.successCallBack);
   },
   /**
@@ -67,5 +70,6 @@ Page({
     this.setData({
       movieDetails: movieDetails
     });
+    wx.hideLoading()
   }
 })

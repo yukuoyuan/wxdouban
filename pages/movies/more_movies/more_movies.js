@@ -44,6 +44,9 @@ Page({
         })
         break;
     }
+    wx.showLoading({
+      title: '加载中',
+    })
     this.getMovieListData(this.data.apiUrl);
     console.log(options.category)
   },
