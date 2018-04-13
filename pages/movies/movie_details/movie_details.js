@@ -71,5 +71,15 @@ Page({
       movieDetails: movieDetails
     });
     wx.hideLoading()
+  },
+  /**
+   * 预览图片
+   */
+  previewImage: function (event) {
+    console.log(event)
+    var src = event.currentTarget.dataset.src;
+    wx.previewImage({
+      urls: [src],
+    })
   }
 })

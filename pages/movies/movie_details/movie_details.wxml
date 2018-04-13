@@ -12,7 +12,7 @@
       <text class='plain_font '>条评论</text>
     </view>
   </view>
-  <image class='movie_img' src='{{movieDetails.movieImg}}'></image>
+  <image class='movie_img' src='{{movieDetails.movieImg}}' data-src='{{movieDetails.movieImg}}' catchtap='previewImage'></image>
   <view class='summary'>
     <view class='originnal_title'>
       <text>{{movieDetails.originalTitle}}</text>
@@ -45,7 +45,7 @@
     <text class='cast_font'>影人</text>
     <scroll-view class='cast_imgs' scroll-x="true" style='width:100%;'>
       <block wx:for="{{movieDetails.castsInfo}}" wx:for-item="item">
-        <view class='cast_container'>
+        <view class='cast_container' data-src='{{item.img}}' catchtap='previewImage'>
           <image class='cast_img' src='{{item.img}}'></image>
           <text class='cast_text'>{{item.name}}</text>
         </view>
