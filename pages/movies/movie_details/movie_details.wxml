@@ -1,2 +1,55 @@
 <!--pages/movies/movie_details/movie_details.wxml-->
-<text>pages/movies/movie_details/movie_details.wxml</text>
+<import src="../stars_template/stars_template.wxml" />
+<view class='container'>
+  <image class='head_img' mode="aspectFill" src='{{movieDetails.movieImg}}' />
+  <view class='head_img_hover'>
+    <text class='main_title '>{{movieDetails.title}}</text>
+    <text class='sub_title '>{{movieDetails.country}}.{{movieDetails.years}}</text>
+    <view class='like'>
+      <text class='heighlight_font '>{{movieDetails.wishCount}}</text>
+      <text class='plain_font '>人喜欢</text>
+      <text class='heighlight_font '>{{movieDetails.commentCount}}</text>
+      <text class='plain_font '>条评论</text>
+    </view>
+  </view>
+  <image class='movie_img' src='{{movieDetails.movieImg}}'></image>
+  <view class='summary'>
+    <view class='originnal_title'>
+      <text>{{movieDetails.originalTitle}}</text>
+    </view>
+    <view class='flex_row'>
+      <text class='mark'>评分</text>
+      <template is="stars_template" data="{{stars:movieDetails.stars,score:movieDetails.score}}" />
+      <!-- <template is="stars_template" data="{{movieDetails.stars,movieDetails.score}}"/> -->
+    </view>
+    <view class='flex_row'>
+      <text class='mark'>导演</text>
+      <text>{{movieDetails.director.name}}</text>
+    </view>
+    <view class='flex_row'>
+      <text class='mark'>影人</text>
+      <text>{{movieDetails.casts}}</text>
+    </view>
+    <view class='flex_row'>
+      <text class='mark'>类型</text>
+      <text>{{movieDetails.genres}}</text>
+    </view>
+  </view>
+  <view class='horizontalline'></view>
+  <view class='synopsis'>
+    <text>剧情简介</text>
+    <text class="summary_content">{{movieDetails.summary}}</text>
+  </view>
+  <view class='horizontalline'></view>
+  <view class='cast'>
+    <text class='cast_font'>影人</text>
+    <scroll-view class='cast_imgs' scroll-x="true" style='width:100%;'>
+      <block wx:for="{{movieDetails.castsInfo}}" wx:for-item="item">
+        <view class='cast_container'>
+          <image class='cast_img' src='{{item.img}}'></image>
+          <text class='cast_text'>{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
