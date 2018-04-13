@@ -60,6 +60,15 @@ Page({
       that.setData({
         isPlayAudio: false
       })
+      app.LocalData.isPlayingMusic = false;
+      app.LocalData.playingMusicId = "";
+    })
+    wx.onBackgroundAudioStop(function () {
+      that.setData({
+        isPlayAudio: false
+      })
+      app.LocalData.isPlayingMusic = false;
+      app.LocalData.playingMusicId = "";
     })
   },
   /**

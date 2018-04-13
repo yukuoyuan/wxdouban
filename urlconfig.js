@@ -8,6 +8,10 @@ var config = {
   comingSoonUrl: `https://${host}/v2/movie/coming_soon`,
   // top250
   top250Url: `https://${host}/v2/movie/top250`,
+  // 电影搜索
+  searchMovieUrl: `https://${host}/v2/movie/search`,
+  // 电影详情
+  movieDetailsUrl: `https://${host}/v2/movie/subject`
 };
 module.exports = config
 

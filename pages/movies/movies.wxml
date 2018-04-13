@@ -1,13 +1,22 @@
 <!--index.wxml-->
 <import src='movie_list_template/movie_list_template.wxml' />
-<view class='container'>
+<import src="movie_grid_template/movie_grid_template.wxml" />
+<view class='search'>
+  <icon class='search_icon' type='search' size='13' color='#405f80'/>
+  <input class='search_input' type='text' placeholder='狂暴巨兽' placeholder-class='placeholder' bindfocus="searchFocus" confirm-type="search" bindconfirm="searchBlurs" />
+  <icon catchtap='deleteSeachInput' wx:if="{{searchContainerShow}}" class='search_icon' type='clear' size='13' color='#405f80'/>
+</view>
+<view wx:if="{{containerShow}}" class='container'>
   <view class="movice_template">
     <template is="movie_list_template" data="{{...inTheatersMovies}}" />
   </view>
   <view class="movice_template">
-    <template is="movie_list_template"  data="{{...comingSoonMovies}}" />
+    <template is="movie_list_template" data="{{...comingSoonMovies}}" />
   </view>
   <view class="movice_template">
-    <template is="movie_list_template"  data="{{...top250Movies}}" />
+    <template is="movie_list_template" data="{{...top250Movies}}" />
   </view>
+</view>
+<view wx:if="{{searchContainerShow}}" class='search_grid_movies_template_container'>
+  <template is="movie_grid_list" data="{{movies}}"/>
 </view>

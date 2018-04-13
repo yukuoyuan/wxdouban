@@ -1,6 +1,6 @@
 <import src="../stars_template/stars_template.wxml" />
 <template name="movie_item_template">
-  <view class='movie_container'>
+  <view class='movie_container' catchtap='jumpDetails' data-id='{{id}}'>
     <image class='movie_img' src='{{converurl}}'>
     </image>
     <text class='movie_text'>{{name}}</text>

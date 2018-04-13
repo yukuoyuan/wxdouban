@@ -70,7 +70,7 @@ Page({
    */
   successCallBack: function (res) {
     this.setData({
-      pageIndex: this.data.pageIndex + 1
+      pageIndex: this.data.pageIndex + 20
     })
     console.log(res);
     var movies = [];
@@ -103,14 +103,14 @@ Page({
     /**
      * 如果是下拉刷新或者是初次加载的数据的话
      */
-    if (this.data.pageIndex == 1) {
+    if (this.data.pageIndex == 20) {
       this.setData({
         movies: movies
       })
-
     } else {
+      var defaultmovies = this.data.movies;
       this.setData({
-        movies: this.data.movies.concat(movies)
+        movies: defaultmovies.concat(movies)
       })
     }
     wx.stopPullDownRefresh();
@@ -150,11 +150,14 @@ Page({
       title: '加载中',
     })
   },
-
   /**
-   * 用户点击右上角分享
+   * 跳转详情
    */
-  onShareAppMessage: function () {
-
+  jumpDetails(event) {
+    console.log(event.currentTarget.dataset.id);
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../movie_details/movie_details?id=' + id,
+    })
   }
 })

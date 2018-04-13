@@ -6,6 +6,5 @@
 }
 
 .grid_list_container {
-
   margin: 40rpx 0 40rpx 6rpx;
 }
