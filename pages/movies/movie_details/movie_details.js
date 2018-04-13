@@ -61,6 +61,9 @@ Page({
       casts: utils.converToCastString(res.data.casts),
       castsInfo: utils.converToCastInfo(res.data.casts)
     }
+    wx.setNavigationBarTitle({
+      title: res.data.title
+    })
     this.setData({
       movieDetails: movieDetails
     });
