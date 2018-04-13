@@ -15,7 +15,7 @@ function http(url,data,callBack){
     method: 'GET',
     success: function (res) {
       console.log(res);
-      callBack(res.data)
+      callBack(res)
     },
     fail: function (res) {
       console.log(res);
