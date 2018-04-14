@@ -32,9 +32,18 @@ Page({
      */
     var getmovie = new GetMovieDetails(movieDetailsUrls + "/" + id, data);
     var that = this;
-    getmovie.getMovieDetails(function (movieDetails) {
+    // getmovie.getMovieDetails(function (movieDetails) {
+    //   wx.hideLoading()
+    //   that.setData({
+    //     movieDetails: movieDetails
+    //   });
+    // });
+    /**
+     * 使用=>的形式
+     */
+    getmovie.getMovieDetails((movieDetails) => {
       wx.hideLoading()
-      that.setData({
+      this.setData({
         movieDetails: movieDetails
       });
     });
